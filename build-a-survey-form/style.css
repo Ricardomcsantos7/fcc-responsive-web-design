@@ -9,8 +9,11 @@ body {
   padding: 1rem;
 }
 
-h1,
-p {
+h1 {
+  text-align: center;
+}
+
+#description {
   text-align: center;
 }
 
@@ -46,4 +49,18 @@ input[type="checkbox"] {
 button {
   margin-top: 1.5rem;
   cursor: pointer;
+}
+
+/* Space between form sections */
+form > p {
+  margin-top: 1.5rem;
+}
+
+label {
+  margin-bottom: 0.25rem;
+}
+
+#label-dropbox,
+#label-comments {
+  margin-top: 1.5rem;
 }
