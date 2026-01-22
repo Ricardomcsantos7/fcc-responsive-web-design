@@ -10,14 +10,16 @@ body {
 }
 
 /* Container */
-.cards-container {
+#playing-cards {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .card {
-  width: 150px;
-  height: 220px;
+  width: 175px;
+  height: 250px;
   background-color: white;
   border: 2px solid #000;
   border-radius: 7px;
@@ -27,14 +29,33 @@ body {
   justify-content: space-between;
 }
 
+.card-2,
+.card-4 {
+  color: red;
+}
+
+.card-top {
+  align-self: flex-start;
+}
+
 .card-top,
 .card-bottom {
-  font-size: 1rem;
+  font-size: 1.25rem;
 }
 
 .card-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  height: 100%;
   font-size: 3rem;
-  text-align: center;
+  /* gap: 0.1rem; */
+}
+
+.center-bottom {
+  transform: rotate(180deg);
 }
 
 .card-bottom {
