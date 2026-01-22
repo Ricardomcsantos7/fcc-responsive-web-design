@@ -38,6 +38,6 @@ body {
 }
 
 .card-bottom {
+  align-self: flex-end;
   transform: rotate(180deg);
-  text-align: right;
 }
