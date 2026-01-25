@@ -1,7 +1,53 @@
+body {
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 2rem;
+}
+
+h1,
+p {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+table {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background-color: #fff;
+}
+
+th,
+td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+}
+
+th {
+  background-color: #eeeeee;
+  font-weight: 600;
+}
+
+tbody tr:not(:last-child) {
+  border-bottom: 1px solid #ddd;
+}
+
 span {
   display: inline-block;
 }
 
+span.status {
+  border-radius: 12px;
+  font-size: 0.85rem;
+}
+
+/* Table rows background */
 tr[class="read"] {
   background-image: linear-gradient(to right, #c8e6c9, #e8f5e9);
 }
@@ -14,6 +60,7 @@ tr[class="in-progress"] {
   background-image: linear-gradient(to right, #bbdefb, #e3f2fd);
 }
 
+/* Status column span background */
 tr[class="to-read"] span[class="status"] {
   border: 1px solid #fbc02d;
   background-image: linear-gradient(#fff59d, #fffde7);
@@ -27,6 +74,11 @@ tr[class="read"] span[class="status"] {
 tr[class="in-progress"] span[class="status"] {
   border: 1px solid #1976d2;
   background-image: linear-gradient(#90caf9, #e3f2fd);
+}
+
+/* Rate */
+td:last-child {
+  white-space: nowrap;
 }
 
 span[class="status"],
@@ -46,14 +98,19 @@ span[class^="rate"] > span {
 }
 
 span[class~="one"] span:first-child {
-  background-image: linear-gradient(red, blue);
+  background-image: linear-gradient(#ff0000, #690000);
 }
 
 span[class~="two"] span:nth-child(1),
 span[class~="two"] span:nth-child(2) {
-  background-image: linear-gradient(#90caf9, #1976d2);
+  background-image: linear-gradient(#ffc400, #836401);
 }
 
 span[class~="three"] span {
   background-image: linear-gradient(#a5d6a7, #388e3c);
+}
+
+/* Hover */
+tbody tr:hover {
+  filter: brightness(0.98);
 }
