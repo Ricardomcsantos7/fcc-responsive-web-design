@@ -30,6 +30,17 @@ body {
   overflow-y: auto;
 }
 
+/* Navbar list */
+#navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#navbar li {
+  margin-bottom: 0.5rem;
+}
+
 /* Navbar content */
 #navbar header {
   font-size: 1.3rem;
