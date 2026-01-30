@@ -1,13 +1,17 @@
 :root {
   --primary: #4f46e5;
   --primary-light: #eef2ff;
-  --text-main: #111827;
+  --text-main: #111827; /* near-black, easier on eyes */
   --text-muted: #6b7280;
   --border-soft: #e5e7eb;
 }
 
 * {
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -60,6 +64,7 @@ input {
   color: var(--text-main);
   font-weight: 500;
   position: relative;
+  padding: 0.4rem 0.6rem;
 }
 
 .nav-link:hover {
@@ -93,6 +98,7 @@ main {
 section {
   max-width: 900px;
   margin: 0 auto 3rem auto;
+  scroll-margin-top: 80px; /* match header height */
 }
 
 section:hover {
