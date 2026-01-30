@@ -23,6 +23,12 @@ body {
   background-color: #f9fafb;
 }
 
+a,
+button,
+input {
+  transition: all 0.2s ease;
+}
+
 /* HEADER */
 #header {
   position: fixed;
@@ -53,11 +59,28 @@ body {
   text-decoration: none;
   color: var(--text-main);
   font-weight: 500;
+  position: relative;
 }
 
 .nav-link:hover {
   text-decoration: none;
   color: var(--primary);
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link:focus-visible::after {
+  width: 100%;
 }
 
 /* MAIN */
@@ -70,6 +93,10 @@ main {
 section {
   max-width: 900px;
   margin: 0 auto 3rem auto;
+}
+
+section:hover {
+  scroll-margin-top: 100px;
 }
 
 #hero {
@@ -113,6 +140,14 @@ section {
   border-radius: 6px;
   border: 1px solid var(--border-soft);
   flex: 1;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+#features li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
 }
 
 /* VIDEO */
@@ -130,7 +165,7 @@ section {
   max-width: 100%;
 }
 
-/* FORM */
+/* FORM/CTA */
 #get-started {
   background-color: var(--primary-light);
   padding: 3rem 1rem;
@@ -162,6 +197,12 @@ section {
   border: 1px solid var(--border-soft);
 }
 
+#email:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.15);
+  outline: none;
+}
+
 #submit {
   padding: 0.6rem;
   border-radius: 4px;
@@ -174,6 +215,15 @@ section {
 
 #submit:hover {
   opacity: 0.9;
+}
+
+#submit:active {
+  transform: scale(0.98);
+}
+
+#submit:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
 }
 
 /* FOOTER */
@@ -209,5 +259,11 @@ footer {
 
   #hero h1 {
     font-size: 1.8rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none;
   }
 }
