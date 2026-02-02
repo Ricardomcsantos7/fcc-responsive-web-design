@@ -62,3 +62,28 @@ A fictional product landing page for a developer-focused tool.
 - Embedded media
 - Forms & validation
 - Accessibility & UX polish
+
+---
+
+## 🛠️ Technologies Used
+
+- HTML5
+- CSS3
+- Flexbox
+- Media Queries
+- Git & GitHub
+
+---
+
+## 🚀 Notes
+
+These projects were developed locally using **VS Code** and pushed incrementally to GitHub to reflect a real development workflow.
+
+Further refinements were made after passing FCC tests to improve layout, readability, and accessibility.
+
+---
+
+## 📌 Certification
+
+All projects are part of the  
+**freeCodeCamp – Responsive Web Design Certification**
